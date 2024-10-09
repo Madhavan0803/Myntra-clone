@@ -100,6 +100,16 @@
     color: #ff3366;
     font-size: 12px;
   }
+
+  @media (max-width: 768px) {
+    .navbar-left > *:not(.logo) {
+      display: none;
+    }
+    
+    .navbar-left .logo {
+      display: block;
+    }
+  }
   
   .navbar-right {
     display: flex;
@@ -153,6 +163,23 @@
     color: #000;
   }
 
+  .menu-bar {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-right a {
+      display: none; 
+    }
+    
+    .menu-bar {
+      display: block; 
+      font-size: 24px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
   .promo-banner {
     display: flex;
     justify-content: space-around;
@@ -181,6 +208,23 @@
   .promo-logo {
     width: 500px;
     height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .promo-banner {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .promo-content h2 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .promo-logo {
+      width: 300px;
+      margin-top: 15px;
+    }
   }
   
   .Container {
@@ -279,10 +323,6 @@
   @media screen and (max-width:900px) {
     .Autoscroll{
       margin: 0%;
-      margin-left: 5%;
-      margin-right: 0%;
-      margin-bottom: 0%;
-      margin-top: 5%;
       font-size: 13px;
     }
   }
@@ -406,3 +446,31 @@ h1 {
   width: 150px;
 }
 
+@media (max-width: 768px) {
+  .offer-banner {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .offer-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .offer-text h1 {
+    font-size: 28px;
+  }
+
+  .offer-text p {
+    font-size: 16px;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .download-buttons img {
+    width: 130px;
+  }
+}
